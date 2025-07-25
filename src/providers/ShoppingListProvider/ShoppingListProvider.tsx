@@ -11,7 +11,7 @@ export const ShoppingListProvider = ({ children }: {children: ReactNode}) => {
     }
 
     const removeItem = (index : number) : void => {
-        setItems((prevState) => prevState.filter((item, indexItem) => indexItem !== index));
+        setItems((prevState) => prevState.filter((_, indexItem) => indexItem !== index));
     }
 
     const saveList = (nameList: string) : void => {
